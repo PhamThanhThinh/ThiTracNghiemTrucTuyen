@@ -1,0 +1,49 @@
+Không cài Xamarin hiện tại người ta dùng Multi-platform App UI gọi tắt là MAUI Mâu-ti pờ-lát-phom
+Xamarin là tiền thân của MAUI, tức là trước khi MAUI ra đời thì người ta dùng Xamarin để build đa nền tảng
+
+Cài MAUI thì mới chọn được template .NET MAUI Blazor Hybrid App
+
+Project này sẽ kết hợp giữa web và mobile (có 1 bạn hỏi về web và mobile dùng dùng database được không, nên nhân tiện làm luôn project)
+để web và mobile dùng dùng database trong asp.net thì người ta dùng kết hợp các công nghệ: Blazor + Web API + MAUI (dùng sql server nha)
+
+Tất cả các project đều dùng .net 8 nha, khi deploy cũng phải dùng .net 8 luôn
+
+Bạn nào có thời gian rảnh thì xem luôn tài liệu chính thống của microsoft luôn nha: https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?view=net-maui-8.0&tabs=vswin&pivots=devices-android
+Họ hướng dẫn luôn các tạo app dành cho mobile luôn rồi, vì đa nền tảng nên chạy được trên Android và iOS luôn (có thể chạy được trên cả mac và windows nữa), thường thì người ta tạo ứng dụng cho mobile với MAUI
+
+Bây giờ chúng ta sẽ reference (rì phơ rình) các project lại với nhau thì mới gọi các class được nha
+
+Api reference Shared: trong project Api gọi được các class từ project Shared
+
+Đồng ý các điều khoản dịch vụ của Android SDK nha
+Lần đầu cài MAUI lên máy nó sẽ có thông báo này
+
+project Shared và project Shared.Components là project phụ tránh phần giao diện dùng chung của hệ thống
+
+Nãy báo lỗi là do chưa cài Android SDK
+
+project Api chỉ kết nối với project Shared
+Trong project Mobile thì chúng ta mới reference 2 project là Shared và Shared.Components
+Nhầm xí
+
+
+
+
+###############
+- Api rì phơ rình Shared
+- Mobile rì phơ rình Shared và Shared.Components
+- Shared.Components rì phơ rình Shared
+- Web rì phơ rình Shared và Shared.Components
+###############
+
+Bây giờ đã tạo xong phần khung của hệ thống thi trắc nghiệm trực tuyến
+
+
+
+có dính tới mobile nên build rất lâu
+
+
+
+
+
+
